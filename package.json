@@ -1,0 +1,15 @@
+{
+  "name": "adventofcode21",
+  "version": "1.0.0",
+  "description": "advent of code 2021",
+  "main": "index.js",
+  "scripts": {
+    "test": "test "
+  },
+  "author": "Ioana Sauleac",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^27.4.2",
+    "typescript": "^4.5.2"
+  }
+}
