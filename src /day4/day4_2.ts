@@ -168,4 +168,5 @@ const rawInput = readLineByLine("../inputs/day4.txt").then((res) => {
     "lastScore ",
     getFalseSum(tickets[0]) * getWinningTicket().bingoNumberValue
   );
+  
 });
