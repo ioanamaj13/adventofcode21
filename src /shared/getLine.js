@@ -43,12 +43,10 @@ var __asyncValues = (this && this.__asyncValues) || function (o) {
     function settle(resolve, reject, d, v) { Promise.resolve(v).then(function(v) { resolve({ value: v, done: d }); }, reject); }
 };
 exports.__esModule = true;
-exports.processLineByLine = void 0;
-var fs = require("fs");
-var readline = require("readline");
-//'../inputs/day1.txt'
-//reads inputs as array of numbers 
-function processLineByLine(path) {
+exports.getLine = void 0;
+var fs = require('fs');
+var readline = require('readline');
+function getLine(path, lineNo) {
     var e_1, _a;
     return __awaiter(this, void 0, void 0, function () {
         var input, fileStream, rl, rl_1, rl_1_1, line, e_1_1;
@@ -57,6 +55,7 @@ function processLineByLine(path) {
                 case 0:
                     input = [];
                     fileStream = fs.createReadStream(path);
+                    console.log(fileStream);
                     rl = readline.createInterface({
                         input: fileStream,
                         crlfDelay: Infinity
@@ -70,7 +69,7 @@ function processLineByLine(path) {
                 case 3:
                     if (!(rl_1_1 = _b.sent(), !rl_1_1.done)) return [3 /*break*/, 5];
                     line = rl_1_1.value;
-                    input.push(parseInt(line));
+                    input.push(line);
                     _b.label = 4;
                 case 4: return [3 /*break*/, 2];
                 case 5: return [3 /*break*/, 12];
@@ -95,4 +94,8 @@ function processLineByLine(path) {
         });
     });
 }
-exports.processLineByLine = processLineByLine;
+exports.getLine = getLine;
+getLine('../inputs/day4.txt', 0).then(function (res) { return console.log(res); });
+// getLine('../inputs/day4.txt', 9, function(err, line){
+//   console.log('The line: ' + line);
+// });
